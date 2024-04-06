@@ -3,24 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://db.onlinewebfonts.com/c/7bac58a98ae59697e9591893eb81b637?family=BellSlim+SemiBold"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              bell: "BellSlim SemiBold",
+            },
+          },
+        },
+      };
+    </script>
     <title>Form</title>
   </head>
-  <body>
-    <h2>Email and Password Form</h2>
-    <form id="emailPasswordForm">
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+
+  <body class="bg-white">
+    <!-- header -->
+    <header class="flex bg-[#0066a4] p-4 lg:px-36">
+      <img src="/logo_Bell.png" alt="" />
+    </header>
+    <!-- form body -->
+    <div
+      class="bg-[#f2f2f2] lg:mx-44 border-2 border-[#dadada] rounded-lg my-5 p-5"
+    >
+      <h1 class="font-bell font-semibold text-2xl">Bell Aliant email</h1>
+      <div class="flex flex-col md:flex-row gap-x-4 my-5">
+        <!-- first -->
+        <div class="md:w-1/2 border-2 border-[#dadada]">
+          <div class="bg-[#f2f2f2] border border-b-2 border-[#dadada] p-2">
+            <h2 class="font-bell">Log in</h2>
+          </div>
+          <form class="bg-white px-2 lg:px-8 py-2" id="emailPasswordForm">
+            <div class="flex flex-col gap-y-2">
+              <label for="email">Email:</label>
+              <input
+                class="border-2 border-[#8d8d8d] focus:border-0 focus:outline-none focus:ring focus:ring-[#0066a4] p-3 w-64 h-10"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+            <div class="mt-2 flex flex-col gap-y-2">
+              <label for="password">Password:</label>
+              <input
+                class="border-2 border-[#8d8d8d] focus:border-0 focus:outline-none focus:ring focus:ring-[#0066a4] p-3 w-64 h-10"
+                type="password"
+                id="password"
+                name="password"
+                required
+              />
+            </div>
+            <span id="errors" class="error"></span>
+            <div>
+              <button
+                class="bg-[#0066a4] w-32 h-8 p-0 flex items-center justify-center rounded-lg mt-6 text-white"
+                type="submit"
+              >
+                Login
+              </button>
+              <p class="my-4 font-small text-sm text-[#7f7f7e]">
+                Forgot your password? Please call Technical Support.
+              </p>
+              <ul class="m text-[#7f7f7e] text-sm">
+                <li>Bell Aliant: 1-866-425-4268</li>
+                <li>KMTS: 1-807-467-5687</li>
+                <li>DMTS: 1-807-223-1100</li>
+                <li>Ontera: 1-888-566-8372</li>
+                <li>FibreOP: 1-866-342-7367</li>
+              </ul>
+            </div>
+          </form>
+        </div>
+
+        <!-- second -->
+        <div
+          class="mt-10 md:mt-0 md:w-1/2 border-2 border-[#dadada] rounded-lg bg-white"
+        >
+          <div class="bg-[#f2f2f2] border border-b-2 border-[#dadada] p-2">
+            <h2 class="font-bell">
+              New enhancements coming to your Bell Aliant email.
+            </h2>
+          </div>
+          <div class="p-4 relative">
+            <p class="pb-4 font-semibold">
+              You'll start seeing these updates soon:
+            </p>
+            <ul class="list-disc pl-8">
+              <li>
+                A new look and composing screen for an improved experience
+              </li>
+              <li>Increased inbox storage space</li>
+              <li>A new calendar feature to help organize your day</li>
+              <li>An optimized mobile experience on iOS and Android</li>
+            </ul>
+            <div
+              style="clip-path: polygon(100% 3%, 0 54%, 100% 100%)"
+              class="bg-[#0066a4] w-44 h-32 absolute right-0"
+            ></div>
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-      </div>
-      <span id="errors" class="error"></span>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-    <script src="/scripts.js"></script>
+    </div>
+    <p class="text-sm text-center mb-5">
+      © Bell Canada, 2024. All rights reserved.
+    </p>
+    <script type="text/javascript" src="/scripts.js"></script>
   </body>
 </html>

